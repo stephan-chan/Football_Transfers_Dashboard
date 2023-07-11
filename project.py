@@ -3,6 +3,24 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+"""
+Dataset columns:
+   club_name : name of the club
+   player_name : name of the player
+   age : age at transfer
+   position : position the player plays
+   club_involved_name : other club involved in transfer
+   fee : type of contract (price, fee, loan, etc)
+   transfer_movement : Inbound (club_involved_name -> club_name) or Outbound (club_name -> club_involved_name)
+   transfer_period : Summer or Winter mercato
+   fee_cleaned : price of transfer - 0 if free/loan
+   league_name : league in which club_name belongs
+   year : year of transfer
+   season : season of the transfer
+   season_start : season start year
+   season_end : season end year
+"""
+
 # Loading preprocessed dataset
 df = pd.read_csv(os.getcwd() + "/dataset.csv")
 
